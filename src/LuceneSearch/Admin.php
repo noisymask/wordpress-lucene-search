@@ -22,7 +22,7 @@ class LuceneSearch_Admin
     public function __construct()
     {
 
-        $this->settings = wpsl_settings();
+        $this->settings = wpls_settings();
 
         $this->index = new LuceneSearch_Search_Index();
         $this->introspector = new LuceneSearch_Search_Introspector( $this->settings['post_types'] );
@@ -231,7 +231,7 @@ class LuceneSearch_Admin
             add_option(LUCENE_SEARCH_SETTINGS_KEY, $form_data, '', 'no');
         }
 
-        $this->settings = wpsl_settings();
+        $this->settings = wpls_settings();
     }
 
 

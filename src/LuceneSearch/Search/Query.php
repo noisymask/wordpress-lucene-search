@@ -65,7 +65,7 @@ class LuceneSearch_Search_Query
      */
     protected function build_search_query($term)
     {
-        $settings = wpsl_settings();
+        $settings = wpls_settings();
 
         $title = intval($settings['relevance']['title']);
         $content = intval($settings['relevance']['content']);

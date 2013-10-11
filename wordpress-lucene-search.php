@@ -78,11 +78,11 @@ spl_autoload_register('wpls_search_autoload');
  * Retrieve plugin options
  * @return array
  */
-function wpsl_settings()
+function wpls_settings()
 {
     $return = array();
     $options = get_option(LUCENE_SEARCH_SETTINGS_KEY);
-    foreach (wpsl_get_settings_array() as $key) {
+    foreach (wpls_get_settings_array() as $key) {
         $return[$key] = $options[$key];
     }
     return $return;
@@ -93,7 +93,7 @@ function wpsl_settings()
  * New plugin options must be added here first
  * @return array
  */
-function wpsl_get_settings_array()
+function wpls_get_settings_array()
 {
     $options = array(
         'post_types',
